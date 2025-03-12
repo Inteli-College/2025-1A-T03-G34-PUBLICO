@@ -5,7 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
-  title: 'EditAIs',
+  title: 'SIMPATIA',
   favicon: 'img/logo-inteli.png',
 
   url: 'https://Inteli-College.github.io',
