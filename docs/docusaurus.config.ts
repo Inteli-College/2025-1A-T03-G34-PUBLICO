@@ -70,10 +70,15 @@ const config: Config = {
           label: 'Project',
         },
         {
-          href: 'https://github.com/Inteli-College/2025-1A-T03-G34-PUBLICO',
+          href: 'https://github.com/Inteli-College/2025-1A-T03-G34-INTERNO',
           label: 'GitHub',
           position: 'right',
         },
+        {
+          to: '/about',
+          label: 'About',
+          position: 'right'
+        }
       ],
     },
     footer: {

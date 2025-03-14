@@ -1,0 +1,9 @@
+{
+    "label": "Reports",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "This section contains reports detailing both the development of project artifacts during each sprint and any blockers encountered. Additionally, it includes updates on changes to the delivery plan and adjustments made throughout the project's progress."
+    }
+  }
+  
