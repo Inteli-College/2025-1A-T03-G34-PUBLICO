@@ -11,7 +11,7 @@ The integration of the HikVision API allows security cameras to connect to **Hik
 ---
 
 ## HikVision API Installation and Configuration
-According to the document **[Installation and Configuration Tutorial for 'Open API' and Integration with 'HikCentral Professional'](../../static/HikVision_Api_Integration.pdf)**, the following steps are required to configure the API:
+According to the document **[Installation and Configuration Tutorial for 'Open API' and Integration with 'HikCentral Professional'](../../../static/HikVision_Api_Integration.pdf)**, the following steps are required to configure the API:
 
 ### 1. Prerequisites
 Before starting the integration, ensure that:
