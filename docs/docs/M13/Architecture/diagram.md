@@ -1,5 +1,5 @@
 ---
-title: "Initial acrhitecture and diagram"
+title: "Initial architecture and diagram"
 sidebar_position: 1
 ---
 

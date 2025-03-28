@@ -31,7 +31,7 @@ function About() {
           <section>
             <h2>The Team</h2>
             <p>
-              I am a Computer Engineering student at <strong>INTELI</strong> and an intern at <strong>Atvos</strong>, where I am applying computer vision and artificial intelligence knowledge to create safety monitoring solution in the workplace.
+              I am Jean Lucas Rothstein Machado a Computer Engineering student at <strong>INTELI</strong> and an intern at <strong>Atvos</strong>, where I am applying computer vision and artificial intelligence knowledge to create safety monitoring solution in the workplace.
             </p>
           </section>
         </div>
