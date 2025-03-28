@@ -77,6 +77,8 @@ Each frame is converted to Base64 and sent to the client.
 
 Each video is dynamically loaded via WebSockets, displaying the processed frames in real-time.
 
+![alt text](../../../static/img/interface.png)
+
 # Conclusion
 
 This implementation enables real-time visualization of the cameras, providing a solid foundation for future improvements and integration with the HikVision API. The initial need to display the videos has been met, allowing for adjustments to the model before full adoption of the solution at Atvos.
