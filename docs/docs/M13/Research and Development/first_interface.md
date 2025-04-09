@@ -77,7 +77,7 @@ Each frame is converted to Base64 and sent to the client.
 
 Each video is dynamically loaded via WebSockets, displaying the processed frames in real-time.
 
-![alt text](../../../static/img/interface.png)
+![Interface](../../../static/img/interface.png)
 
 # Conclusion
 
