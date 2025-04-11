@@ -1,57 +1,26 @@
 ---
-title: Final Module 13 Report 
-sidebar_position: 4
+title: Public Report
+sidebar_position: 1
 ---
 
-## Overview
+## Public Report – SIMPATIA Project Module 13
 
-The **SIMPATIA** project (System for Identification and Monitoring for Assured Protection of Workers using AI) was developed with the goal of automating the detection of PPE compliance using computer vision integrated into the Atvos environment. The following is a summary of the sprint work completed across Sprints 3, 4, and 5.
+The **SIMPATIA** project (System for Identification and Monitoring for Assured Protection of Workers using AI) was developed with the objective of automating the identification and monitoring of workers wearing Personal Protective Equipment (PPE) in industrial plants. Using computer vision techniques and real-time image processing, the system aims to increase safety and efficiency in Atvos' operations by reducing manual effort and improving the consistency of compliance monitoring.
 
----
+For the development of first five project's Sprints, I focused on a different stage of research, implementation, and optimization of the solution.
 
-## Sprint 3 Summary
+During the first two sprints, the focus was on organizing the delivery plan and exploring the technical feasibility of the solution. This involved defining the scope of the system and researching the necessary technologies to make the project viable. Among the most important findings was the possibility of using **YOLOv8** for object detection, **OpenCV** for image capture and processing, and integrating cloud-based tools like **OneDrive**, **SharePoint**, and **Power BI** for storage and visualization. The architecture was drafted to include these tools, with emphasis on a flow that could operate in real time, from camera to alert.
 
-- Initiated **HikVision API integration** research.
-- Temporarily **postponed model retraining** to focus on automation.
-- Developed an early version of the **automated report acquisition** system.
-- Faced time constraints due to **IT support responsibilities**.
+In the third sprint, the development began to take shape through the research and early implementation of an **automated reporting system** and the **HikVision API integration**. Although the HikVision RTSP links were not yet accessible for live testing, work was done using local video files and webcam feeds to simulate camera input. During this time, efforts were also invested in supporting IT demands at Atvos, which delayed some development progress, but allowed for better alignment with internal systems. Tasks like model retraining were postponed to later stages in favor of progressing with architectural validation and testing.
 
----
+The fourth sprint brought substantial advancements with the implementation of a **video streaming interface** using **FastAPI** and **WebSockets**. This allowed for real-time image transmission to a web interface by encoding frames in Base64. At this stage, the YOLOv8 model was integrated into the processing pipeline, allowing it to detect PPE-related objects (like “person” and “head”) and render bounding boxes over violations in real time. Although testing was still limited to local video sources, the system’s end-to-end pipeline — from video input to image visualization — was successfully validated.
 
-## Sprint 4 Summary
+In the final sprint, Sprint 5, the project reached its most complete form. The Python system was enhanced to support **multi-threaded execution**, with each camera feed processed independently in its own thread. This parallelization ensures scalability and allows for simultaneous monitoring of multiple locations without performance bottlenecks. When a PPE violation is detected — for instance, a person without a helmet — the system captures the corresponding frame, saves it with a timestamped filename (`capture_YYYYMMDD_HHMMSS.png`), and triggers a **desktop notification** using the `win11toast` library. Clicking on the notification opens the captured image for immediate review.
 
-- Developed the **video streaming interface** using **FastAPI + WebSockets**.
-- Implemented display logic for **base64-encoded frames**.
-- Integrated **YOLOv8** into the live feed for PPE detection.
-- Used **local videos and webcams** in place of RTSP for testing.
-- Delayed the HikVision integration pending access to RTSP links.
+Captured frames are stored in a **OneDrive** folder that syncs with **SharePoint**, making them accessible to a **Power BI dashboard**. The dashboard was configured to read these images, extract the date and time metadata, and display the information in a user-friendly format. Users can filter events by day and time, view detection statistics on a graph, and see the corresponding image for each detection. This transforms a raw stream of camera feeds into structured, actionable insights for supervisors and safety managers.
 
----
+Over five sprints, the SIMPATIA project evolved from a theoretical proposal to a working MVP capable of real-time detection, alerting, and reporting. The system has proven its capability to integrate with enterprise tools like OneDrive and Power BI, while maintaining the flexibility and performance of local computer vision processing.
 
-## Sprint 5 Summary
-
-- Fully implemented **multi-threaded detection system** for RTSP streams.
-- Added **real-time notifications** using `win11toast`.
-- Captures are saved in **OneDrive**, synced with **SharePoint**.
-- Power BI dashboard integrates with these images via ETL.
-- Filters by date/time, displays detections and images, includes event counter chart.
-
----
-
-## Technical Stack
-
-- **YOLOv8 + OpenCV** for detection  
-- **Python (multithreading + FastAPI)**  
-- **win11toast** for Windows notifications  
-- **OneDrive + SharePoint** for image sync  
-- **Power BI** for interactive reporting  
-
----
-
-## Results
-
-- MVP working with real detection pipeline  
-- Alerts and logs successfully sent to Power BI  
-- Prepared for deployment in production with actual RTSP cameras  
+It stands as a scalable and low-cost solution to increase safety monitoring, with potential to be expanded across multiple production units at Atvos. Future improvements include deeper integration with the HikVision camera system and retraining of the model to detect additional PPE classes such as gloves and safety vests.
 
 ---
