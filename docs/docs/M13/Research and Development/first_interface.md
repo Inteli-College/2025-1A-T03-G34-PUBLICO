@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 
-# Introduction  
+## Introduction  
 
 This page details the functionality of the [code](https://github.com/Inteli-College/2025-1A-T03-G34-INTERNO/blob/dev/SIMPATIA/src/interface/backend/main.py) responsible for **video streaming** and display in a web interface. The main goal is to visualize images captured by cameras in real-time and apply **computer vision** to identify personal protective equipment (PPE).  
 
@@ -77,7 +77,7 @@ Each frame is converted to Base64 and sent to the client.
 
 Each video is dynamically loaded via WebSockets, displaying the processed frames in real-time.
 
-![alt text](../../../static/img/interface.png)
+![Interface](../../../static/img/interface.png)
 
 # Conclusion
 

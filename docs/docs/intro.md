@@ -37,6 +37,10 @@ The project structure is organized as follows:
 │ ├── features
 │ ├── model_training
 │ │ └── EPIs_yolo_detection_training.ipynb
+│ ├── interface/backend
+│ │ └── main.py
+│ ├── M13_review
+│ │ └── SIMPATIA Project.pdf
 │ └── requirements.txt
 ```
 

@@ -3,8 +3,6 @@ title: "HikVision API Integration"
 sidebar_position: 1
 ---
 
-## HikVision API Integration initial research
-
 ## Introduction
 The integration of the HikVision API allows security cameras to connect to **HikCentral Professional (HCP)** and implement advanced functionalities such as automatic event detection and notification sending. This research presents a possible solution to capture images via **RTSP**, process them with a **YOLO computer vision model**, and send alerts to HikCentral when a worker without a helmet is detected.
 
