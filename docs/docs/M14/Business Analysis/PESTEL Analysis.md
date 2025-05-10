@@ -3,8 +3,6 @@ title: PESTEL Analysis
 sidebar_position: 1
 ---
 
-# Introduction
-
 The PESTEL analysis is a strategic tool used to evaluate the **external environment** in which a company or project operates. The acronym **PESTEL** stands for **Political, Economic, Social, Technological, Environmental, and Legal** factors. Each of these categories examines external forces that could impact the success or failure of a business or product.
 
 The following analysis aims to assess the external context in which the **SIMPATIA Project**—a smart PPE detection system based on computer vision—will be introduced. This tool supports strategic decision-making for stakeholders and highlights the environmental influences that shape the market opportunities and risks for safety-focused AI solutions.
