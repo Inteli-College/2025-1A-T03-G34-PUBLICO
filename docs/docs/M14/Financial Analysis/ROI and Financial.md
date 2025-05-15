@@ -1,74 +1,73 @@
 ---
-title: Análise financeira
+title: Financial Analysis
 sidebar_position: 4
 ---
 
-# Análise financeira
+# Financial Analysis
 
-A análise financeira desempenha um papel fundamental na condução de decisões empresariais estratégicas e fundamentadas. Esse processo envolve a avaliação minuciosa de dados financeiros e econômicos, permitindo uma compreensão profunda da saúde financeira de uma organização, projeção de seu desempenho futuro e embasamento sólido para tomadas de decisões. Abrangendo uma variedade de aspectos, desde a avaliação de investimentos até o gerenciamento de riscos e otimização de recursos, essa análise é essencial para a sustentabilidade e crescimento de qualquer negócio.
+Financial analysis plays a key role in guiding strategic and well-founded business decisions. This process involves a thorough assessment of financial and economic data, enabling a deep understanding of an organization’s financial health, projection of future performance, and solid decision-making. Covering a wide range of aspects — from investment evaluation to risk management and resource optimization — this analysis is essential for the sustainability and growth of any business.
 
-A tabela a seguir apresenta uma estimativa dos gastos para o projeto, com duração de um ano. Estes custos englobam despesas relacionadas aos funcionários, como salários e benefícios, ajustados conforme as leis trabalhistas vigentes. Também estão inclusos os valores relativos ao equipamento necessário para o projeto. Os números foram calculados com base em médias salariais para cada função, obtidas de fontes como Catho Profissões e Glassdoor Salaries. Adicionalmente, as cifras foram adaptadas para refletir os custos associados à contratação em regime CLT, utilizando ferramentas como o iDinheiro, a fim de proporcionar uma estimativa precisa e alinhada com a realidade do mercado.
+The table below presents an estimated budget for a similar-scale project, lasting one year. These costs include employee-related expenses, such as salaries and benefits, adjusted according to local labor laws. Equipment-related expenses are also included. Figures were calculated using average salaries from trusted sources such as Catho Profissões and Glassdoor Salaries. In addition, values were adjusted to reflect the true cost of hiring under the CLT labor regime, using tools like iDinheiro to ensure realistic and market-aligned estimates.
 
-## Tabela de Custos de Mão de Obra
+## Labor Cost Table
 
-| Cargo              | Salário Médio (mensal) | Horas Semanais | Duração (meses) | Custo Total     |
-|--------------------|------------------------|----------------|-----------------|-----------------|
-| Desenvolvedor Sênior | R$ 15.000,00             | 40             | 9               | R$ 135.000,00   |
-| Desenvolvedor Pleno  | R$ 9.000,00              | 40             | 9               | R$ 81.000,00    |
-| Desenvolvedor Júnior | R$ 5.000,00              | 40             | 9               | R$ 45.000,00    |
+| Role                 | Avg. Monthly Salary | Weekly Hours | Duration (months) | Total Cost       |
+|----------------------|---------------------|--------------|-------------------|------------------|
+| Senior Developer     | R$ 15,000.00        | 40           | 9                 | R$ 135,000.00    |
+| Mid-level Developer  | R$ 9,000.00         | 40           | 9                 | R$ 81,000.00     |
+| Junior Developer     | R$ 5,000.00         | 40           | 9                 | R$ 45,000.00     |
 
-**Custo Total Mão de Obra**: R$ 261.000,00
-
----
-
-## Tabela de Custos de Manutenção - Infraestrutura Local + Serviços em Nuvem
-
-Aqui consideramos os custos do uso de máquinas locais (já disponíveis nas usinas), além de serviços de nuvem como armazenamento e relatórios em tempo real. A parte de nuvem contempla a integração com o OneDrive (via SharePoint) e Power BI, além do uso de serviços mínimos para automações, backup e sincronização.
-
-| Item                     | Custo Mensal (R$) | Descrição                                                  | Custo Total (9 meses) |
-|--------------------------|-------------------|-------------------------------------------------------------|------------------------|
-| Microsoft 365 (E3)       | R$ 117,00         | Licença para OneDrive for Business + SharePoint + Power BI  | R$ 1.053,00            |
-| Power BI Pro             | R$ 114,00         | Licença para publicação de relatórios                       | R$ 1.026,00            |
-| Energia e Manutenção     | R$ 400,00         | Manutenção elétrica e refrigeração dos equipamentos locais  | R$ 3.600,00            |
-| Win11 Notification infra | R$ 0,00           | Utilização de biblioteca open-source (win11toast)           | R$ 0,00                |
-
-**Custo Total Infraestrutura e Nuvem**: R$ 5.679,00
+**Total Labor Cost**: R$ 261,000.00
 
 ---
 
-## Custo Total Estimado do Projeto
+## Maintenance and Infrastructure Costs – Local + Cloud Services
 
-| Categoria                        | Custo Total (R$) |
+This section considers the use of local machines (already available at industrial sites), as well as cloud services like file storage and real-time reporting. Cloud infrastructure includes integration with OneDrive (via SharePoint) and Power BI, along with minimal services for automation, backup, and synchronization.
+
+| Item                     | Monthly Cost (R$) | Description                                                        | Total (9 months)   |
+|--------------------------|-------------------|--------------------------------------------------------------------|--------------------|
+| Microsoft 365 (E3)       | R$ 117.00         | License including OneDrive for Business + SharePoint + Power BI   | R$ 1,053.00        |
+| Power BI Pro             | R$ 114.00         | License for publishing reports                                     | R$ 1,026.00        |
+| Power/Energy + Maint.    | R$ 400.00         | Electricity and maintenance of local equipment                     | R$ 3,600.00        |
+| Win11 Notification Infra | R$ 0.00           | Open-source library (win11toast) for real-time alerts             | R$ 0.00            |
+
+**Total Infrastructure and Cloud Services Cost**: R$ 5,679.00
+
+---
+
+## Total Estimated Project Cost
+
+| Category                         | Total Cost (R$) |
 |----------------------------------|------------------|
-| Mão de Obra                      | R$ 261.000,00    |
-| Infraestrutura e Serviços Cloud | R$ 5.679,00      |
+| Labor                            | R$ 261,000.00    |
+| Infrastructure & Cloud Services  | R$ 5,679.00      |
 
-**Custo Final Estimado (9 meses)**: **R$ 266.679,00**
-
----
-
-## Projeção de ROI (Retorno sobre Investimento)
-
-Vamos supor que a implementação desse sistema de detecção automática de EPI incorreto gere os seguintes impactos financeiros ao longo de um ano:
-
-- **Redução de multas por não conformidade NR**: R$ 150.000,00
-- **Redução de acidentes/incapacitações temporárias**: R$ 100.000,00
-- **Eficiência na auditoria e compliance**: R$ 70.000,00
-
-**Retorno Estimado Anual**: R$ 320.000,00  
-**Investimento Total (9 meses)**: R$ 266.679,00
-
-**ROI = (Retorno - Investimento) / Investimento**
-
-**ROI = (R$ 320.000,00 - R$ 266.679,00) / R$ 266.679,00 = ~0,20 ou 20%**
+**Estimated Total Cost (9 months)**: **R$ 266,679.00**
 
 ---
 
-## Conclusão
+## Projected ROI (Return on Investment)
 
-A análise financeira apresentada oferece uma visão abrangente dos custos envolvidos no desenvolvimento e manutenção de um projeto de visão computacional aplicado à segurança do trabalho, com duração de nove meses. Levando em consideração as despesas com mão de obra especializada e a estrutura híbrida de processamento (local + nuvem), o investimento necessário foi estimado em **R$ 266.679,00**.
+Assuming that implementing this automated PPE detection system generates the following financial impacts over one year:
 
-Com um ROI estimado de **20% ao ano**, o projeto se mostra financeiramente viável, especialmente considerando os ganhos indiretos como melhoria de imagem institucional, cultura de segurança e redução de passivos trabalhistas. A arquitetura pensada otimiza o uso de máquinas já existentes nas usinas, integrando com ferramentas Microsoft já utilizadas pela empresa, como o Power BI e o OneDrive, reduzindo a dependência de infraestruturas caras em nuvem.
+- **Reduction in NR compliance fines**: R$ 150,000.00  
+- **Reduction in workplace accidents/temporary leaves**: R$ 100,000.00  
+- **Efficiency in audit and compliance processes**: R$ 70,000.00  
 
-Portanto, com base nos dados levantados, o projeto é considerado **tecnicamente robusto e financeiramente sustentável**, com potencial de expansão para múltiplas usinas com ganho de escala.
+**Estimated Annual Return**: R$ 320,000.00  
+**Total Investment (9 months)**: R$ 266,679.00  
+
+**ROI = (Return - Investment) / Investment**  
+**ROI = (R$ 320,000.00 - R$ 266,679.00) / R$ 266,679.00 ≈ 0.20 or 20%**
+
+---
+
+## Conclusion
+
+The presented financial analysis offers a comprehensive view of the costs involved in developing and maintaining a computer vision project for workplace safety over a nine-month period. Considering expenses with skilled labor and a hybrid processing structure (local + cloud), the required investment is estimated at **R$ 266,679.00**.
+
+With an estimated ROI of **20% annually**, the project is financially feasible — especially when considering indirect gains such as improved corporate image, stronger safety culture, and reduced legal liabilities. The proposed architecture optimizes the use of existing on-site equipment and integrates seamlessly with Microsoft tools already in use by the company, such as Power BI and OneDrive, reducing dependency on expensive cloud infrastructure.
+
+Therefore, based on the data presented, the project is considered **technically robust and financially sustainable**, with strong potential for expansion across multiple units, gaining efficiency through scale.
 
