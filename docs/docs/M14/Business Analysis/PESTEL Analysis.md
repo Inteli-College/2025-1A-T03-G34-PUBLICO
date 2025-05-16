@@ -21,7 +21,7 @@ The following analysis aims to assess the external context in which the **SIMPAT
 
 **Cost of Implementation:**
 
-- **Operational Costs vs. ROI**: While implementing AI and computer vision infrastructure has upfront costs, the long-term ROI through fewer accidents and higher compliance is **positive**. A potential risk lies in budget constraints of smaller facilities. Mitigation includes demonstrating cost-benefit through pilot programs and modular scalability.
+- **Operational Costs vs. ROI**: While implementing AI and computer vision infrastructure has upfront costs, the long-term ![ROI](https://inteli-college.github.io/2025-1A-T03-G34-PUBLICO/M14/financial-analysis/roi-and-financial) through fewer accidents and higher compliance is **positive**. A potential risk lies in budget constraints of smaller facilities. Mitigation includes demonstrating cost-benefit through pilot programs and modular scalability.
 
 **Market Potential in Agribusiness:**
 
@@ -42,6 +42,10 @@ The following analysis aims to assess the external context in which the **SIMPAT
 **AI and Computer Vision Maturity:**
 
 - **Advancement in Object Detection**: The continuous evolution of AI-based vision systems boosts SIMPATIA’s capabilities. The **positive impact** comes from increased accuracy and real-time processing. Risk lies in staying updated with fast-changing frameworks. Continuous R&D investment is key.
+
+**Bias in Model Detection:**
+
+- **Demographic or Contextual Bias**: Computer vision models can present **algorithmic bias**, failing to detect PPE correctly on workers with different skin tones, body types, or uniforms. This is a **critical risk**, potentially undermining trust and effectiveness. Mitigation includes diverse training datasets, continuous evaluation, and fairness-aware metrics.
 
 **Integration with Legacy Systems:**
 
@@ -66,6 +70,10 @@ The following analysis aims to assess the external context in which the **SIMPAT
 **Labor Law Implications:**
 
 - **Use of Surveillance in the Workplace**: Monitoring employees for compliance must not infringe on workers' rights. This is a **moderate legal risk**. Mitigation includes clear policies, signage, consent forms, and collaboration with HR/legal departments to avoid conflicts.
+
+**Legislative Changes and Regulatory Uncertainty:**
+
+- **Possible Future Changes in Privacy or AI Law**: Emerging global discussions on AI regulation (e.g., EU AI Act) or expanded interpretations of labor rights could affect the legal use of computer vision in workplaces. This introduces **uncertainty and potential legal risk**. Ongoing legal monitoring and adaptability in system architecture will be necessary.
 
 **Intellectual Property and Licensing:**
 
