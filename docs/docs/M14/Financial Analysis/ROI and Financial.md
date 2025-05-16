@@ -9,6 +9,8 @@ Financial analysis plays a key role in guiding strategic and well-founded busine
 
 The table below presents an estimated budget for a similar-scale project, lasting one year. These costs include employee-related expenses, such as salaries and benefits, adjusted according to local labor laws. Equipment-related expenses are also included. Figures were calculated using average salaries from trusted sources such as Catho Profissões and Glassdoor Salaries. In addition, values were adjusted to reflect the true cost of hiring under the CLT labor regime, using tools like iDinheiro to ensure realistic and market-aligned estimates.
 
+> This is a **preliminary financial analysis**, based on estimated values. It **does not yet reflect the real and final costs** of the system, as the model has not been fully trained with real data from field-deployed cameras. Costs may vary once the system is implemented and expanded into production environments.
+
 ## Labor Cost Table
 
 | Role                 | Avg. Monthly Salary | Weekly Hours | Duration (months) | Total Cost       |
@@ -36,14 +38,30 @@ This section considers the use of local machines (already available at industria
 
 ---
 
+## Training & Processing Environment Costs
+
+The computer vision model (YOLOv8) requires GPU acceleration for training and fine-tuning. While initial experiments used Google Colab with free access to Tesla T4 GPUs, production-scale training or retraining may require cloud services or local high-performance hardware.
+
+| Item                                      | Unit Cost (R$)     | Duration/Usage         | Total Cost        |
+|-------------------------------------------|---------------------|-------------------------|-------------------|
+| Vertex AI Workbench + GPU T4 (n1)       | ~R$ 8,00/hour         | ~100 hours               | R$ 800.00         |
+| Storage (GCS) for datasets    | ~R$ 0,10/GB/month      | 100 GB for 6 months            | R$ 60.00         |
+| Logs/Monitoring (Stackdriver)     | R$ 5,00/month   |  6 months    | R$ 30.00          |
+
+**Estimated Total Training Environment Cost**: R$ 890.00
+*(depending on provider and training schedule)*
+
+---
+
 ## Total Estimated Project Cost
 
 | Category                         | Total Cost (R$) |
 |----------------------------------|------------------|
 | Labor                            | R$ 261,000.00    |
 | Infrastructure & Cloud Services  | R$ 5,679.00      |
+| Vertex AI Training  | R$ 890.00      |
 
-**Estimated Total Cost (9 months)**: **R$ 266,679.00**
+**Estimated Total Cost (9 months)**: **R$ 267,569.00**
 
 ---
 
@@ -56,18 +74,18 @@ Assuming that implementing this automated PPE detection system generates the fol
 - **Efficiency in audit and compliance processes**: R$ 70,000.00  
 
 **Estimated Annual Return**: R$ 320,000.00  
-**Total Investment (9 months)**: R$ 266,679.00  
+**Total Investment (9 months)**: R$ 267,569.00  
 
 **ROI = (Return - Investment) / Investment**  
-**ROI = (R$ 320,000.00 - R$ 266,679.00) / R$ 266,679.00 ≈ 0.20 or 20%**
+**ROI = (R$ 320,000.00 - R$ 267,569.00) / R$ 267,569.00 ≈ 0.19 or 19%**
 
 ---
 
 ## Conclusion
 
-The presented financial analysis offers a comprehensive view of the costs involved in developing and maintaining a computer vision project for workplace safety over a nine-month period. Considering expenses with skilled labor and a hybrid processing structure (local + cloud), the required investment is estimated at **R$ 266,679.00**.
+The presented financial analysis offers a comprehensive view of the costs involved in developing and maintaining a computer vision project for workplace safety over a nine-month period. Considering expenses with skilled labor and a hybrid processing structure (local + cloud), the required investment is estimated at **R$ 267,569.00**.
 
-With an estimated ROI of **20% annually**, the project is financially feasible — especially when considering indirect gains such as improved corporate image, stronger safety culture, and reduced legal liabilities. The proposed architecture optimizes the use of existing on-site equipment and integrates seamlessly with Microsoft tools already in use by the company, such as Power BI and OneDrive, reducing dependency on expensive cloud infrastructure.
+With an estimated ROI of **19% annually**, the project is financially feasible — especially when considering indirect gains such as improved corporate image, stronger safety culture, and reduced legal liabilities. The proposed architecture optimizes the use of existing on-site equipment and integrates seamlessly with Microsoft tools already in use by the company, such as Power BI and OneDrive, reducing dependency on expensive cloud infrastructure.
 
 Therefore, based on the data presented, the project is considered **technically robust and financially sustainable**, with strong potential for expansion across multiple units, gaining efficiency through scale.
 
