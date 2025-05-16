@@ -42,6 +42,8 @@ After training, the model was evaluated on 340 validation images containing 2,30
 | White   | 127    | 239       | 0.854     | 0.882  | 0.910   | 0.612        |
 | Yellow  | 127    | 259       | 0.843     | 0.931  | 0.927   | 0.593        |
 
+![Sample Prediction 2](../../../static/img/alert_20250122_104429.png)
+*Figure 1: Sample Prediction - Missed PPE Detection*
 
 ## Conclusion
 
