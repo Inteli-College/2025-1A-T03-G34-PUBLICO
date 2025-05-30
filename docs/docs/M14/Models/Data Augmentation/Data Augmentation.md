@@ -7,7 +7,7 @@ sidebar_position: 1
 
 During the development of computer vision models, the availability and balance of the dataset are crucial factors for achieving high accuracy and generalization. 
 
-In our project, aimed at detecting the correct use of Personal Protective Equipment (PPE), we face a significant **class imbalance problem**. The majority of captured images represent people **wearing PPE correctly**, while only a small fraction shows people **without PPE**, especially without helmets.
+In the project, aimed at detecting the correct use of Personal Protective Equipment (PPE), we face a significant **class imbalance problem**. The majority of captured images represent people **wearing PPE correctly**, while only a small fraction shows people **without PPE**, especially without helmets.
 
 This imbalance could lead the model to be biased towards the majority class, significantly reducing detection accuracy in the minority class (people without PPE).
 
