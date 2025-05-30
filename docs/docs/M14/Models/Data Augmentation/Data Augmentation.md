@@ -123,6 +123,14 @@ dataset/
 ├── headsaug/     # Augmented images generated
 └── data_augmentation.py  # Script file
 ```
+---
+
+## Images example comprehension 
+
+![Original image](../../../../static/img/nocap.png)
+
+![Augmented image](../../../../static/img/nocapaug135.jpg)
+
 
 ---
 
