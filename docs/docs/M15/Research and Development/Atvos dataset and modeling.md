@@ -85,7 +85,7 @@ Image(filename='/content/runs/detect/train/results.png', width=1000)
 
 This initial training run successfully served as a **proof of concept**, confirming that the YOLOv8 model can effectively learn to detect the absence of EPIs from the provided dataset. The results are strong enough to justify moving forward with the project.
 
-The complete training script, **`Atvos_dataset_yolov8_training.ipynb`**, and the resulting model weights, **`best_yolo_atvos.pt`**, are stored in the project's[in private repository]("https://github.com/Inteli-College/2025-1A-T03-G34-INTERNO").
+The complete training script, **`Atvos_dataset_yolov8_training.ipynb`**, and the resulting model weights, **`best_yolo_atvos.pt`**, are stored in the project's[in private repository](https://github.com/Inteli-College/2025-1A-T03-G34-INTERNO).
 
 The next immediate step is to expand the dataset with more varied examples and proceed with a full-scale retraining in the upcoming sprint to further improve the model's generalization capabilities.
 
