@@ -1,91 +1,72 @@
 ---
-title: Initial Atvos Model Training Results - PoC
-sidebar_position: 3
+title: Initial Model Training Analysis - Atvos PoC
+sidebar_position: 2
 ---
 
-## 1. Context & Sprint Goal
+# Initial Model Training Analysis - Atvos PoC
 
-This sprint focused on establishing the foundational pipeline for model training and validation. The primary goal was to conduct an **initial training run** to serve as a **proof of concept**, demonstrating the model's ability to learn and generalize from the available data, even with a limited number of images.
+This document presents the initial training analysis of the PPE (Personal Protective Equipment) detection model developed in the **SIMPATIA** project.  
+The objective of this sprint was to establish a **proof of concept (PoC)** to validate the model architecture and confirm the feasibility of training with the available dataset.  
 
-A key deliverable of this sprint was the development of a script for dataset splitting, which programmatically divides the dataset into `train`, `val`, and `test` sets. This ensures a reproducible and unbiased evaluation of the model's performance.
-
-For the next sprint, the objective is to **retrain the model** with a significantly larger and more diverse dataset to enhance its accuracy and robustness for a production environment.
-
----
-
-## 2. Initial Training Configuration
-
-The proof-of-concept training was performed on the Google Colab platform. The chosen architecture was **YOLOv8s**, a lightweight yet powerful model, which was fine-tuned on our custom dataset.
-
-| Parameter      | Value                     |
-| :------------- | :------------------------ |
-| **Model** | `yolov8s.pt` (pretrained) |
-| **Image Size** | `imgsz=800`               |
-| **Epochs** | `20`                      |
-| **Optimizer** | `auto`                    |
-| **Device** | `GPU (Tesla T4)`          |
-
-A snippet from the training notebook shows the setup:
-
-```python
-# Load a pretrained YOLOv8s model
-model = YOLO('yolov8s.pt')
-
-# Train the model on the custom dataset for 20 epochs
-results = model.train(
-   data='/content/final_dataset_para_yolo/data.yaml',
-   epochs=20,
-   imgsz=800,
-   device='0' # Use GPU
-)
-```
+The dataset used in this experiment was limited in size and variation, but sufficient to evaluate the learning capacity of the YOLOv8 model and define the baseline for further improvements.
 
 ---
 
-## 3. Proof-of-Concept Validation Metrics
+## Training Overview
 
-Despite the limited dataset, the initial results are highly promising and validate the effectiveness of the chosen architecture and training pipeline. The model demonstrated excellent performance on the validation set.
-
-| Metric         | Value |
-| :------------- | :---- |
-| **Precision (P)** | 0.943 |
-| **Recall (R)** | 0.944 |
-| **mAP@0.5** | 0.935 |
-| **mAP@0.5:0.95** | 0.580 |
-
-These metrics indicate that the model achieved a strong balance between correctly identifying the target class (**Recall**) and ensuring its predictions were accurate (**Precision**). The high `mAP@0.5` score confirms the model's capability to accurately locate the objects of interest.
-
----
-
-## 4. Key Outputs & Artifacts
-
-The training process generated several important artifacts that validate the model's performance.
-
-**Confusion Matrix:**
-The matrix below shows a very low rate of confusion between the `sem_capacete` class and the background, indicating high classification accuracy.
-
-```python
-# Displaying the confusion matrix from the training run
-from IPython.display import Image
-Image(filename='/content/runs/detect/train/confusion_matrix.png', width=800)
-```
-
-**Performance Graphs:**
-The graphs for Precision and Recall demonstrate stable learning throughout the 20 epochs.
-
-```python
-# Displaying the results plot from the training run
-from IPython.display import Image
-Image(filename='/content/runs/detect/train/results.png', width=1000)
-```
+- **Platform**: Google Colab  
+- **Framework**: YOLOv8 (Ultralytics)  
+- **Model**: `yolov8s.pt` (pretrained)  
+- **Hardware**: Tesla T4 GPU (CUDA)  
+- **Dataset**: Atvos PPE dataset (`/content/final_dataset_para_yolo/data.yaml`)  
+- **Image Size**: 800 × 800  
+- **Epochs**: 20  
+- **Optimizer**: Auto (Ultralytics default)  
+- **Model Size**: 11.1M parameters, 28.4 GFLOPs  
 
 ---
 
-## 5. Final Verdict & Next Steps
+## Validation Metrics
 
-This initial training run successfully served as a **proof of concept**, confirming that the YOLOv8 model can effectively learn to detect the absence of EPIs from the provided dataset. The results are strong enough to justify moving forward with the project.
+After 20 epochs, the model was evaluated on the validation set. The results confirmed the architecture’s ability to generalize, even with a limited dataset.
 
-The complete training script, **`Atvos_dataset_yolov8_training.ipynb`**, and the resulting model weights, **`best_yolo_atvos.pt`**, are stored in the project's[in private repository](https://github.com/Inteli-College/2025-1A-T03-G34-INTERNO).
+| Metric        | Value   |
+|---------------|---------|
+| Precision (P) | 0.943   |
+| Recall (R)    | 0.944   |
+| mAP@0.5       | 0.935   |
+| mAP@0.5:0.95  | 0.580   |
 
-The next immediate step is to expand the dataset with more varied examples and proceed with a full-scale retraining in the upcoming sprint to further improve the model's generalization capabilities.
+These results demonstrate a good balance between **Precision** (avoiding false positives) and **Recall** (capturing all true detections). The high mAP@0.5 score validates the model’s effectiveness for the PoC stage.
 
+---
+
+## Key Outputs & Artifacts
+
+**Confusion Matrix**  
+The confusion matrix indicates very low misclassification between the `no-helmet` class and background, confirming accurate detection capability.  
+
+![Confusion Matrix](../../../static/img/confusion_matrix_no-helmet.png)
+
+**Performance Graphs**
+The training curves for Precision and Recall remained stable across epochs, indicating no overfitting in this initial run.
+
+![Model Results](../../../static/img/model_no-helmet_results.png)
+
+# Conclusion
+
+The initial training run was successful and achieved high accuracy, validating YOLOv8 as a robust architecture for the Atvos PPE detection use case. The generated artifacts, including the confusion matrix and training curves, confirm the stability of the training pipeline.
+
+**Artifacts generated in this sprint:**
+
+- Training notebook: Atvos_dataset_yolov8_training.ipynb
+
+- Trained weights: best_yolo_atvos.pt
+
+**Next Steps:**
+
+- Expand the dataset with more diverse and real-world images from plant cameras.
+
+- Retrain the model at larger scale to improve generalization.
+
+- Prepare the model for integration into the real-time MVP pipeline (FastAPI + Power BI).
