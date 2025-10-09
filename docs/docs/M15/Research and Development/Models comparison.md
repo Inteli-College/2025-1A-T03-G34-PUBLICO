@@ -53,12 +53,12 @@ In contrast, the Roboflow dataset introduced **annotation noise**, **more comple
 
 ## 4. Strategic Insights
 
-### 🔍 Strengths of Robofolow Dataset:
+###  Strengths of Robofolow Dataset:
 - Closer representation of **real industrial conditions**.  
 - Larger dataset size, with more diverse samples.  
 - Essential for testing robustness in Atvos-specific environments.  
 
-### ⚡ Strengths of Atvos Dataset:
+### Strengths of Atvos Dataset:
 - High precision and recall for “no-helmet”.  
 - Cleaner labels and more consistent structure.  
 - Strong **proof-of-concept** for violation detection.  
