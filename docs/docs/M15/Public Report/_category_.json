@@ -1,0 +1,9 @@
+{
+    "label": "Public Report",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "This section contains the Public Report detailing artifacts during each sprint and any blockers encountered both the development of SIMPATIA project which objetive is to create a system that automates the identification and monitoring of workers using Personal Protective Equipment (PPE) in industrial plants through computer vision (object detection model). It also seeks to integrate with the plant's security cameras, enabling real-time image processing to notify or trigger alerts in the surveillance software, as well as to generate reports based on the records captured by the system. Additionally, it includes updates on changes to the delivery plan and adjustments made throughout the project's progress. "
+    }
+  }
+  
