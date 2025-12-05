@@ -72,12 +72,12 @@ Here, we align classes that roughly correspond to similar protective gear to ena
 
 ## 5. Strategic Insights
 
-### 🔍 Strengths of YOLOv12:
+### Strengths of YOLOv12:
 - **ViT Backbone**: Improves context understanding in crowded or occluded scenes.
 - **Expanded Labeling**: Enables detection of violations (e.g., "Without Helmet", "Without Vest").
 - **Improved Individual PPE Classes**: High mAP in critical categories like gloves and helmets.
 
-### ⚠️ Limitations:
+### Limitations:
 - **Lower Overall mAP** (due to harder class detection and dataset variability).
 - **Segment/box mismatch** during validation might slightly degrade accuracy.
 - **Higher latency** and training complexity.
