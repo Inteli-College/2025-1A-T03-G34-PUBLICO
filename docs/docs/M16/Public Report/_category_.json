@@ -1,0 +1,9 @@
+{
+    "label": "Public Report",
+    "position": 2,
+    "link": {
+      "type": "generated-index",
+      "description": "This section contains the Public Report detailing artifacts during each sprint of Module 16 and the finalization of SIMPATIA project which objective is to create a system that automates the identification and monitoring of workers using Personal Protective Equipment (PPE) in industrial plants through computer vision (object detection model). "
+    }
+  }
+  
